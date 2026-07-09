@@ -41,4 +41,10 @@ public class LogicTest
 
         Assert.Throws<ArgumentException>(() => new Booking("", r1, Priority.Matura, t1));
     }
+
+    [Fact]
+    public void Result_Test()
+    {
+        
+    }
 }
