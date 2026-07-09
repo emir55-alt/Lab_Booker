@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/LabBooker.Api/LabBooker.Api.csproj" />
+    <Project Path="src/LabBooker.Application/LabBooker.Application.csproj" />
+    <Project Path="src/LabBooker.Domain/LabBooker.Domain.csproj" />
+    <Project Path="src/LabBooker.Infrastructure/LabBooker.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/LabBooker.Application.Tests/LabBooker.Application.Tests.csproj" />
+    <Project Path="tests/LabBooker.Domain.Tests/LabBooker.Domain.Tests.csproj" />
+    <Project Path="tests/LabBooker.Infrastructure.Tests/LabBooker.Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>
