@@ -1,6 +1,7 @@
 ﻿namespace LabBooker.Domain.Tests;
 using LabBooker.Domain.Enums;
 using LabBooker.Domain.ValueObjects;
+using LabBooker.Domain.Entities;
 public class LogicTest
 {
     [Fact]
@@ -28,5 +29,16 @@ public class LogicTest
         
         Assert.False(t1.Overlaps(t2));
         Assert.True(t3.Overlaps(t2));
+    }
+
+    [Fact]
+    public void Booking_Konstruktor_Test()
+    {
+        Requester r1 = new Requester{Name = "Manfred Knon"};
+        DateTime tomorrow = DateTime.Today.AddDays(1);
+        DateTime dt = tomorrow.AddHours(10);
+        TimeRange t1 = new TimeRange(dt, new TimeSpan(1, 0, 0));
+
+        Assert.Throws<ArgumentException>(() => new Booking("", r1, Priority.Matura, t1));
     }
 }
