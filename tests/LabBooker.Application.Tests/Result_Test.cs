@@ -1,6 +1,6 @@
 ﻿namespace LabBooker.Application.Tests;
 using LabBooker.Application.Common;
-public class UnitTest1
+public class Result_Test
 {
     [Fact]
     public void Result_Succes_Test()
