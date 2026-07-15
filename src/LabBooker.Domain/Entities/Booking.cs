@@ -10,16 +10,17 @@ public class Booking
     public Priority Priority { get; init; }  
     public TimeRange TimeRange { get; init; }
 
-    internal Booking(string rId, Requester rq, Priority pr, TimeRange tr )
+    internal Booking(string roomId, Requester requester, Priority priority, TimeRange timeRange)
     {
         BookingId = Guid.NewGuid();
-        if (rId == null || string.IsNullOrWhiteSpace(rId))
+        if (roomId == null || string.IsNullOrWhiteSpace(roomId))
         {
             throw new ArgumentException("Es muss ein Raum angegeben werden!");
         }
-        RoomId = rId;
-        Requester = rq;
-        Priority = pr;
-        TimeRange = tr;
+        RoomId = roomId;
+        Requester = requester;
+        Priority = priority;
+        TimeRange = timeRange;
     }
+    private Booking() { }
 }

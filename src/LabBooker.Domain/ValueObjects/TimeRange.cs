@@ -25,6 +25,8 @@ public record TimeRange
             throw new ArgumentOutOfRangeException("Die Duration darf nicht 0 sein!");
         }
     }
+    
+    private TimeRange() { }
 
     public bool Overlaps(TimeRange other)
     {
